@@ -1,5 +1,4 @@
 import BasicLayout from "../layouts/BasicLayout.jsx";
-import {Link} from "react-router-dom";
 
 const AboutPage = () => {
     return (
