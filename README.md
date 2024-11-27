@@ -10,3 +10,13 @@ Currently, two official plugins are available:
 # 왜 Vite인가?
 
 Create React App과 비교해 개발 경험과 성능 면에서 더 낮은 선택
+
+# 라이브러리 설치
+
+## tailwind css
+
+1. `npm install -D tailwindcss postcss autoprefixer`
+2. `npx tailwindcss init`
+3. `tailwind.config.js` 수정
+4. `postcss.config.js` 수정
+4. `src/index.css` 수정
