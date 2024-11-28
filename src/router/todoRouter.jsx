@@ -5,6 +5,7 @@ const Loading = <div>Loading....</div>;
 const TodoList = lazy(() => import("../pages/todo/ListPage.jsx"));
 const TodoRead = lazy(() => import("../pages/todo/ReadPage.jsx"));
 const TodoAdd = lazy(() => import("../pages/todo/AddPage.jsx"));
+const TodoModify = lazy(() => import("../pages/todo/ModifyPage.jsx"));
 
 const todoRouter = () => {
     return [
@@ -34,6 +35,14 @@ const todoRouter = () => {
             element: (
                 <Suspense fallback={Loading}>
                     <TodoAdd></TodoAdd>
+                </Suspense>
+            ),
+        },
+        {
+            path: "modify/:tno",
+            element: (
+                <Suspense fallback={Loading}>
+                    <TodoModify></TodoModify>
                 </Suspense>
             ),
         },
