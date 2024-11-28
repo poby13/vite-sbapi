@@ -1,5 +1,6 @@
 import {createBrowserRouter} from "react-router-dom";
 import {Suspense, lazy} from "react";
+import todoRouter from "./todoRouter.jsx";
 
 const Loading = <div>Loading....</div>
 const Main = lazy(() => import('../pages/MainPage.jsx'))
@@ -21,12 +22,7 @@ const root = createBrowserRouter([
     {
         path: "todo",
         element: <Suspense fallback={Loading}><TodoIndex></TodoIndex></Suspense>,
-        children: [
-            {
-                path: "list",
-                element: <Suspense fallback={Loading}><TodoList></TodoList></Suspense>,
-            }
-        ]
+        children: todoRouter()
     }
 ])
 
