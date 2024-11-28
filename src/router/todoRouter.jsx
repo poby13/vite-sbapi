@@ -4,6 +4,7 @@ import { Navigate } from "react-router-dom";
 const Loading = <div>Loading....</div>;
 const TodoList = lazy(() => import("../pages/todo/ListPage.jsx"));
 const TodoRead = lazy(() => import("../pages/todo/ReadPage.jsx"));
+const TodoAdd = lazy(() => import("../pages/todo/AddPage.jsx"));
 
 const todoRouter = () => {
     return [
@@ -25,6 +26,14 @@ const todoRouter = () => {
             element: (
                 <Suspense fallback={Loading}>
                     <TodoRead></TodoRead>
+                </Suspense>
+            ),
+        },
+        {
+            path: "add",
+            element: (
+                <Suspense fallback={Loading}>
+                    <TodoAdd></TodoAdd>
                 </Suspense>
             ),
         },

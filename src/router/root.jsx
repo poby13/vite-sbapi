@@ -6,7 +6,6 @@ const Loading = <div>Loading....</div>
 const Main = lazy(() => import('../pages/MainPage.jsx'))
 const About = lazy(() => import('../pages/AboutPage.jsx'))
 const TodoIndex = lazy(() => import('../pages/todo/IndexPage.jsx'))
-const TodoList = lazy(() => import('../pages/todo/ListPage.jsx'))
 
 // lazy는 MainPage를 메모리에 올리지 않고 지연로딩
 // Suspense 로딩UI를 보여줌
