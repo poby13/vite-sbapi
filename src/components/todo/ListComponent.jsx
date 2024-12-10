@@ -1,7 +1,7 @@
 import useCustomMove from "../../hooks/useCustomMove.jsx";
 import {getList} from "../../api/todoApi.jsx";
 import {useEffect, useState} from "react";
-import PageComponent from "../menus/PageComponent.jsx";
+import PageComponent from "../common/PageComponent.jsx";
 
 const initState = {
     dtoList: [],
